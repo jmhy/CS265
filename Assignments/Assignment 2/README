@@ -1,0 +1,3 @@
+First, please make sure that getPlayerStatistics.py and sample.in are in the same directory.
+Second, cd to the directory containing these two files.
+Third, run the script by typing: ./getPlayerStatistics.py

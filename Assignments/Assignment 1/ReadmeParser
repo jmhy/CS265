@@ -1,0 +1,18 @@
+#!/usr/bin/awk -f
+#Joseph Haggerty
+#APR 2016
+#CS265-002
+
+BEGIN { FS=":" }
+$1=="index" {
+print "\t<index>"
+for( i=2; i<=NF; ++i )
+	print "\t\t<file>" $i "</file>"
+print "\t</index>"
+}
+$1=="required"{
+print "\t<required>"
+for( i=2; i<=NF; ++i )
+	print "\t\t<file>" $i "</file>"
+print "\t</required>"
+}
