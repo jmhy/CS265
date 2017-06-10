@@ -1,0 +1,25 @@
+Joseph Haggerty - jmh463
+CS 265 - Section 002
+Lab 9
+
+Q1.1:
+The program crashed and I received the error "Segmentation fault (core dumped)" and a new file, core, was created in the working directory.
+
+Q1.2:
+It failed at inTable()
+
+Q1.3:
+a. scanf was expecting an argument of type 'int *', but the second arg was type 'int'. I passed the second arg by reference (using &), not by value.
+b. The second arg was expected to be an int, but was a double. The third arg was expected to be a double, but was an int. I switched around the '%d' and '%f' statements in the first arg of printf.
+c. It failed at line 79 (which part of inTable()), where index i was out of bounds of array st. This was fixed by incrementing numlines after the first assignment to st in lines 48-49.
+d. Received a segmentation fault and the failure was at scanf. Fixed by passing the second arg 'n' by reference and not by value (&).
+e. The pivot location needs to be randomized so that a partition does not end up empty. An assert could check if the pivot has been initially randomized and check if it has been changed.
+
+Q1.4:
+Compilers can't detect all logic mistakes or all possible inputs, but can detect bad syntax, valid argument types, and flow of control.
+
+Q1.5:
+The first arg of qsort (the array to be sorted) is of type void*, so passing a function won't be caught compile-time, but will be noticed as a run-time error.
+
+Q2:
+See gInt.java, gIntTest.java, and build.xml

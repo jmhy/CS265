@@ -1,0 +1,57 @@
+Joseph Haggerty - jmh463
+CS 265 - Section 002
+Lab 5
+
+Q1:
+List - A set of elements, each with data and a pointer to the next element. The head of the list is a pointer to the first item and the end of the list has a null pointer. Elements can be rearranged by changing pointers instead of the entire collection.
+Stack - A set of elements linked to each other like a list. Its two characteristic operations are push and pop. Push adds an element to the collection. Pop removes the most recently added element from the collection that was not already removed. Last in, first out.
+Queue - A set of ordered elements, whose order follows the order of elements added to the collection. The first element added to the queue would be the first to be removed. First in, first out.
+Dictionary - A collection of key-value pairs, such that each possible key can only appear once in the collection.
+
+Q2:
+At worst and on average, the binary search will search elements O(log(n)) times. Half of the data is eliminated at each step. The # of steps is proportional to the number of times n can be divided by 2 before we are left with a single element. Ignoring roundoff, it is log(n).
+
+Q3:
+At worst and on average, the linear search will search elements 0(n) times. This is because each element is examined until the desired one is found and order of examination doesn't matter. Worst case involves not finding the element, or the last element examined is the desired one.
+
+Q4: Linear search would be preferable with a small list of elements to be searched. If it was an unsorted array, a linear search would have to be used.
+
+Q5:
+Note: sub arrays are separated by | for readability
+*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+*37* 82 27 63 73 27 75 55 45 8 | *84* 93 98 93
+*27* 27 8 | 37 | *82* 63 73 75 55 45 | 84 | *93* 98 93
+8 | *27* 27 | 37 | *63* 73 75 55 45 | 82 | 84 | *93* 93 | 98
+8 | 27 27 | 37 | *55* 45 | 63 | *73* 75 | 82 | 84 | 93 93 | 98
+8 | 27 27 | 37 | 45 | 55 | 63 | 73 75 | 82 | 84 | 93 93 | 98
+
+Q6:
+3 24 6
+
+Q7:
+[13, [28, [24, [3, None]]]]
+
+Q8:
+Before the first attempt to modify s, s is a point to buffer. So when adding "... who's never been born" to s also adds it onto buffer. In the second attempt, buffer is set back to "on the footsteps of dawn" while s is set to a pointer to free memory. buffer is then copied to empty memory s points to, then the second char array is appended to that copied char array. buffer is not modified since it is copied
+
+Q9:
+Hash	Node(s):
+3	[Bob,38][Cos,86]
+4	[Vera,99][Nash,11][Kate,28][Jaga,24]
+5	[Jesse,78]
+
+Q10:
+int find( char *key, int *p_ans )
+{
+	int h = hash(key);
+	entry *node;
+	for (node = table[h]; node != NULL; node = node->next)
+	{
+		if (strcmp(key,node->key) == 0)
+		{
+			*p_ans = node->val;
+			return 1;
+		}
+	}
+	return 0;
+}

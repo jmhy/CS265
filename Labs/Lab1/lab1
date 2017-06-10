@@ -1,0 +1,85 @@
+Joseph Haggerty - jmh463
+CS265 - Section 002
+lab 1
+
+Q1:
+When an interactive shell that is not a login shell is started, bash reads and
+executes commands from /etc/bash.bashrc and ~/.bashrc, if these files exist.
+
+When bash is invoked as an interactive login shell, or as a non-interactive
+shell with the --login option, it first read and executes commands from the
+file /etc/profile, if it exists. After reading that file, it looks for
+~/.bash_profile, ~/.bash_login, and ~/.profile, in that order, and reads and
+executes commands from the first one that exists and is readable.
+
+Q2:
+See vi_lab
+
+Q3:
+I see a long listing of the contents of my CS265 directory. Specifically, filenames (I have no folders yet), their permissions, last modified date/time and owner of file. funny and hello.bash are in this list of files.
+
+Q4:
+I would be giving myself read/write, giving group read, and giving world read permissions.
+
+Q5:
+I would be giving myself all permissions, giving group read/execute, and giving world read/execute permissions.
+
+Q6:
+Yes, I can read it.
+
+Q7:
+Yes again.
+
+Q8:
+Yes, it printed:
+Hellooooo!  My name is jmh463.  Have a good break?
+
+Q9:
+Via either command:
+chmod 700 hello.bash
+or
+chmod u+x hello.bash
+
+Q10:
+Saving changes in vim results in "E45: 'readonly' option is set (add ! to override)". Using ":wq!" saves my changes. File permissions remain unchanged.
+
+Q11:
+ls *: Lists all files in working directory
+ls a*: annoy  annoy.cc
+ls *m*: itemList  itemList-2cols  TelecomTruths
+ls anno?: annoy
+ls annoy?: ls: cannot access annoy?: No such file or directory
+
+Q12:
+Vim began editing for two new files: "a" and "space"
+
+Q13:
+a.-bash: b?: No such file or directory
+b.Is a < b?
+c.$USER is jmh463
+d.\$USER is $USER
+e.Today is Sun Apr  3 18:30:02 EDT 2016
+f.Today is Sun Apr  3 18:31:40 EDT 2016
+g.Today is `date`
+h.Files that start w/e:
+
+For h, I have no files that start with e
+
+Q14:
+The first command is lexically sorted and the second one is numerically sorted.
+
+Q15:
+sort -nr itemList-2cols | head -n8
+or
+sort -nr itemList-2cols | head -8
+
+Q16:
+lab1.tar.gz takes its place.
+
+Q17: The lab1.tgz file was expanded/unzipped to lab1.tar
+
+Q18: grep "Vacation" *
+or if you want to ignore case: grep -i "Vacation" *
+
+Q19: find ~ -name lab1
+

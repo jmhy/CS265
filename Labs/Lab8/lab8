@@ -1,0 +1,30 @@
+Joseph Haggerty - jmh463
+CS 265 - Section 002
+Lab 8
+
+Q1.1:
+i. It means avoid using global variables when possible, pass data through function arguments, explicitly documenting which functions use which data, and utilizing classes.
+ii. It means to use non-overlapping functions and capabilities with necessary and minimalist behaviors.
+iii. It means to decrease interdependency between software modules, minimize and document side effects that the user might not be aware of, and define external services needed.
+iv. It means that one should define arguments consistently and have behavior similar to associated interfaces.
+
+Q1.2:
+The input line can be no more than 199 chars long and each line cannot contain more than 20 fields. It also does not account for commas and lone quotes within quotes and no fields on a line.
+
+Q1.3:
+It can handle much more chars and fields per line. It is able to differentiate between an end of line vs end of file. It can also handle commas and quotes within quotes better.
+
+Q1.4:
+It still does not account for lines with no fields and cannot parse 2 files at the same time. The latter is due to use of static variables, which means that only once instance of those variables can exist and apply to one file at a time.
+
+Q1.5:
+It is able to report empty line with no fields by printing line = `'. It can read handle multiple files.
+
+Q1.6:
+Yes. The user does not need to know about the implementation details in order to parse a csv file. It has a small orthagonal set of primitives in that each function has its own necessary purpose and there is no overlapping of tasks. It doesn't reach behind the user's back, such as changing a variable without the user's knowledge. It does the same thing everywhere in that naming conventions for function and variable names are consistent.
+
+Q1.7:
+see Csv.java and test.csv
+
+Q2:
+See Makefile

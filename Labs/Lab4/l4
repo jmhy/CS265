@@ -1,0 +1,79 @@
+Joseph Haggerty - jmh463
+CS 265 - Section 002
+Lab 4
+
+Q1.1:
+The variable not-eof = FALSE is a double negative. It would be clearer if it was eof = TRUE.
+
+Q1.2:
+The function should be renamed "isSmaller" to be consistent with it returning a "1" when true.
+
+Q1.3:
+The three variable names in falloc are unintelligible. To improve, they should be shortened and possibly contain more vowels to understand what they mean. MAXRODDHSH is better than SMRHSHSCRTCH, but not good enough.
+
+Q1.4:
+if ( ( c != 'y' ) && ( c != 'Y' ) )
+	return;
+
+if ( length >= BUFSIZE )
+	length = BUFSIZE;
+
+flag = !flag;
+
+quote = (*line == '"');
+
+bit = val & 1;
+
+Q1.5:
+val and ch are not guaranteed to be evaluated in the same order as listed in the code.
+
+Q1.6:
+1 1
+1 2
+2 1
+
+Q1.7:
+if ( !istty(stdin) && !istty(stdout) && !istty(stderr) )
+	return 0;
+
+return retval;
+
+for ( k = 0; k < 5; k++) {
+	scanf("%lf", &dx);
+	x += dx;
+}
+
+Q1.8:
+for ( int i = 0; i < total; i++ ) {
+	if (this.getName(i) == nameTable.userName()) {
+		return (true);
+	}
+}
+
+Q1.9:
+"c" is evaluated twice, when the intent is only once. There should be parentheses around each c, like (c). The part "? 1 : 0" is redundant and can be removed.
+
+Q1.10:
+static const double FT2METER = 0.30408;
+static const double METER2FT = 3.28084;
+static const double MI2FT = 5280.0;
+static const double MI2KM = 1.609344;
+static const double SQMI2SQKM = 2.589988;
+
+Q1.11:
+First comment mentions a return value but the function is void, comment is probably outdated. "test for even number" is inconsistent with the code, which is testing if n is greater than max or n is odd. "Write a message" is unneccesary when the function name is "write_message". The first "increment line counter" states the obvious, while the second is misleading. The second is incrementing by 2 this time, not 1.
+
+Q2.1:
+See s1.py
+
+Q2.2:
+See s2.py
+
+Q2.3:
+See id.py
+
+Q2.4:
+See id2.py
+
+Q2.5:
+See parsePhoneNrs.py

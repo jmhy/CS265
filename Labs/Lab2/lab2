@@ -1,0 +1,40 @@
+Joseph Haggerty - jmh463
+CS 265 - Section 002
+Lab 2
+
+Q1:
+The output is a list of full file names of all files in my user directory that were modified in the last 48 hours.
+
+Q2:
+find . -type f -name *.bash
+
+Q3:
+./CS265/Lab1/hello.bash
+./CS265/Lab2/tmp/gotMe.bash
+
+Q4:
+97 lines, 499 words, and 2960 characters
+
+Q5:
+grep "the" breadIsDangerous.txt | wc -l
+
+Q6:
+A backup "spellExample.bak" file was created from the original "spellExample", and then the original had been modified with spelling corrections.
+
+Q7:
+The output is a textual comparison of the differences between spellExample and spellExample.bak
+
+Q8:
+There is no output this time
+
+Q9:
+The first command returned 0, which indicates success. The second returned 1, which indicates failure, in that it could not find the string. The third returned 2, which also indicates failure, in that it could not find the file.
+
+Q10:
+See count.bash
+
+Q11:
+See reextend
+
+Q12:
+See organiseMusic

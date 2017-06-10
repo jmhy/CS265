@@ -1,0 +1,13 @@
+#!/bin/bash
+#By Joseph Haggerty
+
+for file in *.mp3 ; do
+	dir="${file%%\ -*}"
+	fname="${file#*-\ }"
+	
+	if [ ! -d "$dir" ] ; then
+		mkdir "$dir"
+	fi
+	
+	mv "$file" "$dir/$fname"
+done

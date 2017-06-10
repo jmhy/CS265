@@ -1,0 +1,18 @@
+#!/bin/bash
+#by Joseph Haggerty
+
+if [ ! -f ./sign.c ] ; then
+	echo "sign.c not found"
+	exit 1
+fi
+
+if [ ! -f ./squash.awk ] ; then
+	echo "squash.awk not found"
+	exit 2
+fi
+
+gcc -osign sign.c
+
+./sign < /usr/share/dict/words | sort | awk -f squash.awk > out
+
+awk '{ print NF " " $0}' < out | sort -n | tail
