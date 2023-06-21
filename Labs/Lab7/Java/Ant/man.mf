@@ -1,3 +1,0 @@
-Classpath: ./foo.jar
-Main-Class: foo
-
